@@ -11,3 +11,6 @@ The react app is built on the (React Webpack Babel)[https://github.com/alicoding
 ## References
 
 - http://tutorials.pluralsight.com/ruby-ruby-on-rails/building-a-crud-interface-with-react-and-ruby-on-rails
+- [Yarn](https://code.facebook.com/posts/1840075619545360)
+- http://jpsierens.com/tutorial-react-redux-webpack/
+- https://github.com/jpsierens/webpack-react-redux-react-router
