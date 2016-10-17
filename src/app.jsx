@@ -26,16 +26,14 @@ export default class App extends React.Component {
                 <p>This toy app is built using</p>
                 <ul>
                     <li>
-                        an <a href="https://companies-146403.appspot.com/api/companies">API</a>
-                        hosted on Google App Engine
+                        an <a href="https://companies-146403.appspot.com/api/companies">API</a> hosted on Google App Engine
                     </li>
                     <li>
-                        a client that is served from an
-                        <a href="http://companies-ui.s3-website-ap-southeast-2.amazonaws.com/">AWS S3 bucket</a>
+                        a client that is served from
+                        an <a href="http://companies-ui.s3-website-ap-southeast-2.amazonaws.com/">AWS S3 bucket</a>
                     </li>
                     <li>
-                        via a
-                        <a href="https://d2ks7hkmj9nqhr.cloudfront.net/">AWS CloudFront Distribution</a>
+                        via a <a href="https://d2ks7hkmj9nqhr.cloudfront.net/">AWS CloudFront Distribution</a>
                     </li>
                 </ul>
                 <CompanyTable companies={this.state.companies}/>
