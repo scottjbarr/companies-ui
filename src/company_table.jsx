@@ -1,37 +1,22 @@
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import styles from './index.scss';
 import React from 'react';
-import $ from 'jquery';
+import CompanyRow from './company_row';
 
 var CompanyTable = React.createClass({
-    getInitialState() {
-        console.log('CompanyTable : getInitialState');
+    getDefaultProps() {
+        console.log('CompanyTable : getDefaultProps');
         return {companies: []};
     },
 
-    componentDidMount() {
-        console.log('CompanyTable : componentDidMount');
-        const url = 'https://companies-146403.appspot.com/api/companies';
-
-        $.getJSON(url, (response) => {
-            this.setState({ companies: response })
-        });
-    },
-
     render() {
-        const companies = this.state.companies.map((item) => {
-            return (
-                <tr key={item.id}>
-                    <td>{item.name}</td>
-                    <td>{item.exchange}:{item.symbol}</td>
-                </tr>
-            )
+        var rows = [];
+        this.props.companies.forEach(function(company) {
+            rows.push(<CompanyRow company={company} key={company.id} />);
         });
 
         return(
             <table className="table table-striped">
                 <tbody>
-                    {companies}
+                    {rows}
                 </tbody>
             </table>
         )
