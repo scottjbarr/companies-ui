@@ -8,6 +8,7 @@ The backend project is [here](https://github.com/scottjbarr/companies).
 
 The react app is built on the (React Webpack Babel)[https://github.com/alicoding/react-webpack-babel].
 
+[![Build Status](https://semaphoreci.com/api/v1/scottbarr/companies-ui/branches/master/badge.svg)](https://semaphoreci.com/scottbarr/companies-ui)
 
 ## Start Server
 
