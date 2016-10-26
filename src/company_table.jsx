@@ -1,26 +1,28 @@
 import React from 'react';
 import CompanyRow from './company_row';
 
-var CompanyTable = React.createClass({
-    getDefaultProps() {
-        console.log('CompanyTable : getDefaultProps');
-        return {companies: []};
-    },
+class CompanyTable extends React.Component {
+  render() {
+    const rows = this.props.companies.map(c =>
+      <CompanyRow company={c} key={c.id}/>
+    );
 
-    render() {
-        var rows = [];
-        this.props.companies.forEach(function(company) {
-            rows.push(<CompanyRow company={company} key={company.id} />);
-        });
+    return(
+      <table className="table table-striped">
+        <tbody>
+          {rows}
+        </tbody>
+      </table>
+    )
+  }
+};
 
-        return(
-            <table className="table table-striped">
-                <tbody>
-                    {rows}
-                </tbody>
-            </table>
-        )
-    }
-});
+CompanyTable.propTypes = {
+    companies: React.PropTypes.array.isRequired,
+}
+
+CompanyTable.defaultProps = {
+    companies: [],
+}
 
 export default CompanyTable;
